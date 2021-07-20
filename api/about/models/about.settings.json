@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "projects",
+  "collectionName": "abouts",
   "info": {
-    "name": "Projects",
-    "description": ""
+    "name": "About"
   },
   "options": {
     "increments": true,
@@ -15,11 +14,11 @@
     "Title": {
       "type": "string"
     },
-    "Description": {
-      "type": "text"
+    "Detail": {
+      "type": "richtext"
     },
     "Image": {
-      "model": "file",
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -29,9 +28,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "Link": {
-      "type": "string"
     }
   }
 }

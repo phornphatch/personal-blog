@@ -1,27 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
+  font-family: 'Inter', sans-serif;
+  background-color: #fbfbfb;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 main {
-  padding: 5rem 0;
+  padding: 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -72,7 +64,7 @@ a {
 
 .title,
 .description {
-  text-align: center;
+  text-align: left;
 }
 
 .description {
@@ -94,19 +86,17 @@ code {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
   max-width: 800px;
   margin-top: 3rem;
 }
 
 .card {
-  margin: 1rem;
+  margin: 5px;
   flex-basis: 45%;
-  padding: 1.5rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
+  border: 2px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
@@ -115,17 +105,19 @@ code {
 .card:focus,
 .card:active {
   color: #0070f3;
-  border-color: #0070f3;
+  border-color: #edca85;
 }
 
 .card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+  margin: 0 0 0 0;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 7px;
 }
 
 .card p {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -139,3 +131,190 @@ code {
     flex-direction: column;
   }
 }
+
+.logo {
+  float: left;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.ant-menu{
+  background: white;
+  font-size: 1rem;
+  font-weight: bold;
+  float: right;
+  }
+
+.ant-layout-header{
+  background: white;
+}
+
+.ant-btn-primary {
+  background-color: #41b3b6;
+  border-color: #41b3b6;
+}
+
+.topic {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+
+.banner {
+  width: 80%;
+  align-self: center;
+  margin: auto;
+  padding-top: 7rem;
+}
+.banner-background {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+}
+.hello {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+.iam {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+.name {
+  font-size: 5.5rem;
+  font-weight: bolder;
+  background: linear-gradient(250deg,#a0e9ff 45%,#a162e8 60%,#f093b0 80%,#edca85 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.about {
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  align-self: center;
+}
+.about-background {
+  width: 100%;
+  height: 100vh;
+  padding-top: 150px;
+  background-color: #fbfbfb;
+}
+.about-detail {
+  padding-left: 70px;
+  padding-top: 30px;
+  align-self: center;
+}
+
+.project {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.projects {
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  align-self: center;
+}
+.projects-background {
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+  background-color: #F3F4EC;
+}
+.project-detail {
+  align-self: center;
+}
+.project-image {
+  border-radius: 10px 10px 0px 0px;
+}
+.card{
+  background-color: white;
+}
+
+.gallery {
+  width: 90%;
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  align-self: center;
+}
+.gallery-background {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+.gallery-image {
+  border-radius: 20px;
+}
+.gallery-card {
+  border-radius: 50px;
+  width: 316px;
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.grid {
+  display: flex;
+  align-items:unset;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-top: 3rem;
+}
+
+.contact {
+  background-color: #f2c94c;
+  width: 70%;
+  height: 500px;
+  border-radius: 50px;
+  text-align: center;
+  margin: auto;
+  
+}
+.contact-background {
+  background-color: black;
+  width: 100%;
+  height: 700px;
+  padding-top: 100px;
+}
+.contact-image{
+  padding-top: 50px;
+  padding-left: 50px;
+}
+.contact-topic {
+  font-size: 60px;
+  font-weight: bolder;
+}
+.contact-description {
+  font-size: 25px;
+  font-weight: normal;
+}
+.contact-information {
+  margin: auto;
+  align-items: center;
+  align-self: center;
+}
+.icon {
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  border-radius: 50px;
+  font-size: 40px;
+  margin: auto;
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+

@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "projects",
+  "collectionName": "galleries",
   "info": {
-    "name": "Projects",
+    "name": "Gallery",
     "description": ""
   },
   "options": {
@@ -19,7 +19,7 @@
       "type": "text"
     },
     "Image": {
-      "model": "file",
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -30,8 +30,17 @@
       "required": false,
       "pluginOptions": {}
     },
-    "Link": {
-      "type": "string"
+    "Main_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
