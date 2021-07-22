@@ -63,16 +63,16 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
             <Row>
               <Col span={12}>
                 <div className="hello">
-                  Hello
-                </div>
-                <div className="iam">
-                  I am
+                  Hello, I am 
                 </div>
                 <div className="name">
                   ZUMO.
                 </div>
-                <p className="description">
-                  Phornphatch Hiranpattanakul jubjub
+                <div className="newbiedev">
+                  A Newbie DEV
+                </div>
+                <p className="banner-description">
+                  Start coding with all Polymer chemistry specialist skills and knowledge.
                 </p>
                 <Button type="primary" shape="round" size={'large'}>
                   Contact Me
@@ -82,20 +82,42 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
                 <Image src={banner} alt="Picture of the author" />
               </Col>
             </Row>
-
           </div>
         </div>
+
+        {/* Marquee text */}
+        <Row>
+          <Col span={24}>
+          <div className="marquee">
+          <div className="text-box">
+            <h1> NICE TO MEET YOU &nbsp; 😀 &nbsp;  LET'S CONVERT COFFEE INTO CODE &nbsp; ☕ &nbsp; NICE TO MEET YOU &nbsp; 😀 &nbsp; LET'S CONVERT COFFEE INTO CODE &nbsp; ☕ &nbsp; NICE TO MEET YOU &nbsp; 😀 &nbsp;  LET'S CONVERT COFFEE INTO CODE &nbsp; ☕ &nbsp; NICE TO MEET YOU &nbsp; 😀 &nbsp;  LET'S CONVERT COFFEE INTO CODE &nbsp; ☕ &nbsp; NICE TO MEET YOU &nbsp; 😀 &nbsp;  LET'S CONVERT COFFEE INTO CODE &nbsp; ☕ &nbsp;</h1>
+            <h1> NICE TO MEET YOU &nbsp; 😀 &nbsp;  LET'S CONVERT COFFEE INTO CODE &nbsp; ☕ &nbsp; NICE TO MEET YOU &nbsp; 😀 &nbsp; LET'S CONVERT COFFEE INTO CODE &nbsp; ☕ &nbsp; NICE TO MEET YOU &nbsp; 😀 &nbsp;  LET'S CONVERT COFFEE INTO CODE &nbsp; ☕ &nbsp; NICE TO MEET YOU &nbsp; 😀 &nbsp;  LET'S CONVERT COFFEE INTO CODE &nbsp; ☕ &nbsp; NICE TO MEET YOU &nbsp; 😀 &nbsp;  LET'S CONVERT COFFEE INTO CODE &nbsp; ☕ &nbsp;</h1>
+          </div>
+          </div>
+          </Col>
+        </Row>
+       
 
         <>{/* Abouts */}</>
         <div className="about-background">
           <div className="about">
             <Row>
-              <Col span={12} className="image slide-from-left">
-                <Image src={journey} alt="My Journey" />
+              <Col span={12} className="image">
+              <OverPack style={{display: 'flex'}}>
+                  <QueueAnim key="queue" delay={200} interval={500} duration={1000} animConfig={[
+                      { opacity: [1, 0], translateX: [0, -50] }
+                    ]}>
+                    <Image src={journey} alt="My Journey" key="a"/>
+                  </QueueAnim>
+                </OverPack>
               </Col>
               <Col span={12} className="about-detail">
-                <div className="topic">About Me</div>
-                <div className="container">
+              <OverPack style={{display: 'flex'}}>
+              <QueueAnim key="queue" delay={200} interval={500} duration={500} >
+                <div className="about-topic1" key="a"> This is not a resume ! </div>
+                <div className="about-topic2" key="b"> It's just.. </div>
+                <div className="about-topic2" key="c"> My Life Story. 🚀 </div>
+                <div className="container" key="d">
                   {abouts.map((about) => {
                     return (
                       <a>
@@ -105,6 +127,8 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
                     )
                   })}
                 </div>
+              </QueueAnim>
+              </OverPack>
               </Col>
             </Row>
           </div>
