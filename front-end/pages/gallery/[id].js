@@ -1,7 +1,9 @@
 import axios from 'axios'
 import { Image } from 'antd'
+import { Button, Row, Col, Layout, Menu, Popover, BackTop } from 'antd'
 
 
+const { Header, Footer, Sider, Content } = Layout
 
 // list all id for using  in getStaticProps
 export async function getStaticPaths() {
@@ -22,30 +24,76 @@ export async function getStaticProps({params}) {
     `http://localhost:1337/galleries/${params.id}`
   )
   const images = gallery.Image.map((image)=>{
-    return `http://localhost:1337${image.formats.small.url}`
+    return `http://localhost:1337${image.formats.medium.url}`
   })
-
+  const main_image = `http://localhost:1337${gallery.Main_image.formats.large.url}`
+ 
   return {
     props: {
       title: gallery.Title,
       description: gallery.Description,
-      images
+      images,
+      main_image
     }
   }
 }
 
-export default function Gallery({title, description, images}){
+export default function Gallery({title, description, images, main_image}){
   return (
-    <div>
-      {title}
-      {description}
-      {images.map((url)=> {
-        return (
-          <Image.PreviewGroup>
-            <Image src={url} width={200} />
-          </Image.PreviewGroup>
-        )
-      })}
+    <div className="gallery-page">
+
+
+      {/* Naviagtion Bar */}
+      <Layout>
+        <Header style={{ position: 'fixed', zIndex: 1, width: '100%', backgroundColor: "rgba(0, 0, 0, 0)" }}>
+          <div className="logo" style={{color: 'white'}}><a href={`/`}>ZUMO</a></div>
+          <Menu mode="horizontal" defaultSelectedKeys={['0']} style={{backgroundColor: "rgba(0, 0, 0, 0)" }}>
+            <Menu.Item key="1"><a href={"/#about"} style={{color: 'white'}}>About Me</a></Menu.Item>
+            <Menu.Item key="2"><a href={"/#project"} style={{color: 'white'}}>Projects</a></Menu.Item>
+            <Menu.Item key="3"><a href={"/gallery"} style={{color: 'white'}}>Gallery</a></Menu.Item>
+          <Menu.Item key="4"><a href={"/#contact"} style={{color: 'white'}}>Contact Me</a></Menu.Item>
+          </Menu>
+        </Header>
+      </Layout>
+      
+      <div className="gallerypage-header">
+        <Image src={main_image} preview={false} className="gallery-main-image" />
+        <div className="gallerypage-overlay">
+          <div className="gallerypage-banner">
+            <span className="gallerypage-title">{title}</span>
+            <Button className="explore">
+            <a href="#images">Explore</a>
+          </Button>
+          </div>
+        </div>
+      </div>
+
+      <div className="blur-box">
+      </div>
+
+      <div className="gallerypage-description">
+      <div className="gallerypage-description-sub">
+        {description}
+        </div>
+      </div>
+
+      <div className="gallerypage-images" id="images">
+        
+        
+        {images.map((url)=> {
+          return (
+            <Image.PreviewGroup>
+              <Image src={url} width={300} className="gallerypage-image" />
+            </Image.PreviewGroup>
+          )
+        })}
+       
+
+      </div>
+      <footer>
+          Coded by ZUMO
+      </footer>
     </div>
+    
   )
 }
