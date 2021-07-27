@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&display=swap');
-
+@import url("https://unpkg.com/aos@2.3.1/dist/aos.css"); 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 
 html,
 body {
@@ -172,6 +173,9 @@ code {
   width: 100%;
   height: 92vh;
 }
+.banner-image {
+  margin-top: -20px;
+}
 .hello {
   font-size: 3rem;
   font-weight: bold;
@@ -225,9 +229,8 @@ h1:nth-child(2) {
 .marquee{
   display:inline-block;
   position:relative;
-  animation:scroll 30s linear infinite; 
+  animation:scroll 20s linear infinite; 
   }
-
   @keyframes scroll{
   0% {left:0px;}
   100% {left:-800px;}
@@ -236,8 +239,8 @@ h1:nth-child(2) {
 .about {
   width: 80%;
   margin: auto;
+  margin-top: -50px;
   align-items: center;
-  align-self: center;
 }
 .about-background {
   width: 100%;
@@ -246,7 +249,7 @@ h1:nth-child(2) {
   background-color: #fbfbfb;
 }
 .about-topic1 {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   display: inline;
   text-decoration: underline;
@@ -256,14 +259,24 @@ h1:nth-child(2) {
   text-decoration-color: #f2c94c;
 }
 .about-topic2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+.about-topic {
   font-size: 50px;
   font-weight: bold;
+  margin-top: -13px;
 }
 .about-detail {
   padding-left: 70px;
   padding-top: 30px;
-
 }
+.about-description {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 16px;
+}
+
 
 .project {
   padding: 5rem 0;
@@ -282,17 +295,68 @@ h1:nth-child(2) {
 .projects-background {
   width: 100%;
   height: 100vh;
-  padding-top: 100px;
+  padding-top: 50px;
   background-color: #F3F4EC;
+  position: relative;
 }
+.dot1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.dot2 {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
 .project-detail {
-  align-self: center;
+  margin-top: 100px;
+  padding-left: 30px;
 }
 .project-image {
   border-radius: 10px 10px 0px 0px;
 }
 .card{
   background-color: white;
+}
+.project-topic {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: -13px;
+}
+.project-description {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 16px;
+}
+.popout{
+	@keyframes ani{
+		0%{
+			transform: translate3d(0,0,0);
+			text-shadow: 0em 0em 0 lightblue;
+		} 
+		30%{
+			transform: translate3d(0,0,0);
+			text-shadow: 0em 0em 0 #a162e8;
+		}
+		70%{
+			transform: translate3d(0.08em,-0.08em,0);
+			text-shadow: -0.08em 0.08em lightblue;
+		}
+		100%{
+			transform: translate3d(0.08em,-0.08em,0);
+			text-shadow: -0.08em 0.08em lightblue;
+		}
+	}
+	span{
+		position: relative;
+		display: inline-block;
+		animation: ani 1s infinite alternate cubic-bezier(0.860, 0.000, 0.070, 1.000);
+		@for $i from 1 through 3{
+			&:nth-last-child(#{$i}n){ animation-delay: -1s*$i/3/2;}
+		}
+	}
 }
 
 .gallery {
@@ -334,7 +398,6 @@ h1:nth-child(2) {
 }
 .gallery-card-description {
   font-size: 14px;
- 
 }
 
 .contact {
@@ -351,6 +414,7 @@ h1:nth-child(2) {
   width: 100%;
   height: 700px;
   padding-top: 100px;
+  position: relative;
 }
 .contact-image{
   padding-top: 50px;
@@ -381,4 +445,152 @@ h1:nth-child(2) {
   margin-left: 20px;
   margin-top: 20px;
 }
+.ellipse {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  animation-name: example;
+  animation-duration: .8s;
+  animation-iteration-count: infinite;
+}
+@keyframes example {
+  0%   {left:30px; top:30px;}
+  50%  {left:30px; top:40px;}
+  100% {left:30px; top:30px;}
+}
+.star {
+  position: absolute;
+  bottom: 30px;
+  left: 80px;
+  animation-name: example2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes example2 {
+  0%   { bottom: 30px; left: 80px;}
+  50%  {bottom: 25px; left: 75px;}
+  100% {bottom: 30px; left: 80px;}
+}
+.polygon {
+  position: absolute;
+  top: 10px;
+  right: 150px;
+  animation-name: example3;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes example3 {
+  0%   {top: 10px; right: 150px;}
+  50%  {top: 10px; right: 160px;}
+  100% {top: 10px; right: 150px;}
+}
+.rectangle {
+  position: absolute;
+  bottom: 10px;
+  right: 70px;
+  animation-name: example4;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;
+}
+@keyframes example4 {
+  0%   {bottom: 10px; right: 70px;}
+  50%  {bottom: 15px; right: 75px;}
+  100% {bottom: 10px; right: 70px;}
+}
 
+.up {
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+  background-color: #edca85;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+// ------------------------------------------------------------------
+// gallery page
+.gallery-page {
+  background-color: black;
+  color: white;
+}
+.gallerypage-header {
+  width: 100%;
+  position: relative;
+  height:100vh;
+ 
+}
+.gallery-main-image {
+  opacity: 0.7;
+  width:100vw;
+}
+.gallerypage-overlay {
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  left: 0;
+  width: 100%;
+}
+.gallerypage-banner {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+}
+.gallerypage-title {
+  font-size: 120px;
+  font-weight: bolder;
+  color: white;
+  font-family: 'Open Sans' ;
+  text-align: center;
+}
+button.ant-btn.explore {
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+.explore {
+  font-size: 20px;
+  text-align: center;
+  font-weight: normal;
+  color: white;
+  background-color: rgba(1, 0, 0, 0.2);
+  border-color: white;
+  border-width: 2px;
+  width: 110px;
+  height: 40px;
+} 
+.explore:hover,
+.explore:focus,
+.explore:active {
+  color: #f2c94c;
+  border-color: #f2c94c;
+  background-color: rgba(1, 0, 0, 0.5);
+}
+
+.gallerypage-description {
+  font-size: 20px;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+.gallerypage-description-sub {
+  width: 40%;
+  margin: auto;
+}
+.gallerypage-images {
+  width: 80%;
+  margin: auto;
+}
+.gallerypage-image {
+  padding: 10px 10px 10px 10px;
+}
+.blur-box {
+  width: 100%;
+  height: 400px;
+  background-image: linear-gradient(to bottom, rgba(1,0,0,0), rgba(0,0,0,1));
+  position: absolute;
+  z-index: 0;
+}
