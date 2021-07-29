@@ -2,7 +2,6 @@ import axios from 'axios'
 import { Image } from 'antd'
 import { Button, Row, Col, Layout, Menu, Popover, BackTop } from 'antd'
 
-
 const { Header, Footer, Sider, Content } = Layout
 
 // list all id for using  in getStaticProps
