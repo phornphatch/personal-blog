@@ -11,6 +11,7 @@ import Rectangle from '../public/Rectangle.png'
 import Polygon from '../public/Polygon.png'
 import dot1 from '../public/dot1.png'
 import dot2 from '../public/dot2.png'
+import randomwork from '../public/random-work.png'
 import { InstagramOutlined, GithubOutlined, YoutubeOutlined, SlackOutlined, FacebookOutlined, LinkedinOutlined, SolutionOutlined, UpOutlined, SmileOutlined } from '@ant-design/icons';
 import { OverPack } from 'rc-scroll-anim';
 import TweenOne from 'rc-tween-one';
@@ -248,14 +249,15 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
                       SEE MORE
                     </Button> */}
               </Col>
-              <Col span={12} style={{margin:"auto", textAlign:"center"}}>
+              <Col span={12} style={{marginTop: "70px", textAlign:"center"}}>
                 <OverPack>
-                <QueueAnim key="queue" delay={200} interval={500} duration={1000} >
-                  <div key="a">
+                <QueueAnim key="queue" delay={100} interval={500} duration={1000} >
+                <Image src={randomwork} key="a" />
+                  <div key="b" style={{marginTop:"10px"}}>
                     <div className="other-switch">
                       <Switch onClick={() => window.location="/other-works"}></Switch>
                     </div>
-                    <div className="other-topic1">
+                    <div className="other-topic1" >
                       Please turn on 
                       if you really want to know.
                     </div>
