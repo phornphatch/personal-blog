@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import axios from 'axios'
 import Image from 'next/image'
-import { Button, Row, Col, Layout, Menu, Popover, BackTop, Switch } from 'antd'
+import { Button, Row, Col, Layout, Menu, Popover, BackTop, Switch, Dropdown } from 'antd'
 import banner from '../public/banner.png'
 import journey from '../public/journey.png'
 import contact2 from '../public/contact2.png'
@@ -12,13 +12,33 @@ import Polygon from '../public/Polygon.png'
 import dot1 from '../public/dot1.png'
 import dot2 from '../public/dot2.png'
 import randomwork from '../public/random-work.png'
-import { InstagramOutlined, GithubOutlined, YoutubeOutlined, SlackOutlined, FacebookOutlined, LinkedinOutlined, SolutionOutlined, UpOutlined, SmileOutlined } from '@ant-design/icons';
+import { InstagramOutlined, GithubOutlined, YoutubeOutlined, FacebookOutlined, LinkedinOutlined, SolutionOutlined, UpOutlined, SmileOutlined } from '@ant-design/icons';
 import { OverPack } from 'rc-scroll-anim';
 import TweenOne from 'rc-tween-one';
 import QueueAnim from 'rc-queue-anim';
 import designproject from '../public/designproject.png'
 
 const { Header, Footer, Sider, Content } = Layout
+const menu = (
+  <Menu>
+    <Menu.Item>
+      <a href="#coding">
+        💻 Coding
+      </a>
+    </Menu.Item>
+    <Menu.Item>
+      <a href="#design">
+        🎨 Design
+      </a>
+    </Menu.Item>
+    <Menu.Item>
+      <a href="#random-works">
+        🍭 Random
+      </a>
+    </Menu.Item>
+  </Menu>
+);
+
 
 // manipulate data from strapi
 export async function getStaticProps(ctx) {
@@ -53,10 +73,12 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
       {/* Naviagtion Bar */}
       <Layout>
         <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
-          <div className="logo">ZUMO</div>
+          <div className="logo"><a href="/">ZUMO</a></div>
           <Menu mode="horizontal" defaultSelectedKeys={['0']}>
             <Menu.Item key="1"><a href="#about">About Me</a></Menu.Item>
-            <Menu.Item key="2"><a href="#project">Projects</a></Menu.Item>
+            <Dropdown overlay={menu} placement="bottomCenter">
+            <Menu.Item key="2"><a>My Works</a></Menu.Item>
+            </Dropdown>
             <Menu.Item key="3"><a href="#gallery">Gallery</a></Menu.Item>
             <Menu.Item key="4"><a href="#contact">Contact Me</a></Menu.Item>
           </Menu>
@@ -148,7 +170,7 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
         </div>
 
         <>{/* Coding Projects */}</>
-        <div className="projects-background" id="project">
+        <div className="projects-background" id="coding">
         <div className="dot1"><Image src={dot1} width={350} height={250} /></div>
         <div className="dot2"><Image src={dot2} width={380} height={270} /></div>
           <div className="projects">
@@ -193,7 +215,7 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
         </div>
 
         <>{/* Design Projects */}</>
-        <div className="about-background" id="about">
+        <div className="about-background" id="design">
           <div className="about">
             <Row>
               <Col span={12} className="image">
@@ -233,7 +255,7 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
         </div>
 
         <>{/* Others */}</>
-        <div className="other-background" id="other">
+        <div className="other-background" id="random-works">
           <div className="other">
             <Row>
               <Col span={12} className="other-detail">
@@ -314,20 +336,19 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
                 <div className="contact-topic">Contact.</div>
                 <div className="contact-description">BEWARE!! It's not me.</div>
                 <div className="contact-description">It's my social media behavior.</div>
-                <div className="icon"><a href="https://www.instagram.com/findingzumo/" ><InstagramOutlined /></a></div>
-                <div className="icon"><a href="https://github.com/phornphatch" ><GithubOutlined /></a></div>
-                <div className="icon"><a href="https://www.youtube.com/channel/UCkl4LSwnvDUwLhSEp5EhVOA" ><YoutubeOutlined /></a></div>
-                {/* <div className="icon"><a href="https://www.instagram.com/findingzumo/" ><SlackOutlined /></a></div> */}
-                <div className="icon"><a href="https://www.facebook.com/findingzumo/" ><FacebookOutlined /></a></div>
-                <div className="icon"><a href="https://www.linkedin.com/in/phornphatch/" ><LinkedinOutlined /></a></div>
+                <div className="icon"><a href="https://www.instagram.com/findingzumo/" target="_blank"><InstagramOutlined /></a></div>
+                <div className="icon"><a href="https://github.com/phornphatch" target="_blank"><GithubOutlined /></a></div>
+                <div className="icon"><a href="https://www.youtube.com/channel/UCkl4LSwnvDUwLhSEp5EhVOA" target="_blank" ><YoutubeOutlined /></a></div>
+                <div className="icon"><a href="https://www.facebook.com/findingzumo/" target="_blank"><FacebookOutlined /></a></div>
+                <div className="icon"><a href="https://www.linkedin.com/in/phornphatch/" target="_blank"><LinkedinOutlined /></a></div>
               </Col>
             </Row>
           </div>
 
-          <div className="ellipse"><Image src={Ellipse} width={260} height={200} /></div>
-          <div className="star" ><Image src={Star} width={200} height={200} /></div>
-          <div className="polygon"><Image src={Polygon} width={200} height={200} /></div>
-          <div className="rectangle"><Image src={Rectangle} width={200} height={200} /></div>
+          <div className="left-top"><Image src={Ellipse} width={260} height={200} /></div>
+          <div className="left-bottom" ><Image src={Star} width={200} height={200} /></div>
+          <div className="right-top"><Image src={Polygon} width={200} height={200} /></div>
+          <div className="right-bottom"><Image src={Rectangle} width={200} height={200} /></div>
         </div>
 
         <BackTop>
@@ -336,7 +357,7 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
 
       </main>
       <footer>
-          Coded by ZUMO
+        <a href="https://github.com/phornphatch" target="_blank">Coded by ZUMO 😃</a>
       </footer>
     </div>
   )

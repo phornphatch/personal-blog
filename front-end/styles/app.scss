@@ -151,6 +151,17 @@ code {
   background: white;
 }
 
+footer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: normal;
+  color: black;
+}
+
 .ant-btn-primary {
   background-color: #41b3b6;
   border-color: #41b3b6;
@@ -411,7 +422,7 @@ div.effect-shine:hover {
   }
 }
 .other-detail {
-  margin-top: 100px;
+  margin-top: 70px;
   padding-left: 30px;
 }
 .other-description {
@@ -533,7 +544,7 @@ div.effect-shine:hover {
   margin-left: 20px;
   margin-top: 20px;
 }
-.ellipse {
+.left-top {
   position: absolute;
   top: 30px;
   left: 30px;
@@ -546,7 +557,7 @@ div.effect-shine:hover {
   50%  {left:30px; top:40px;}
   100% {left:30px; top:30px;}
 }
-.star {
+.left-bottom {
   position: absolute;
   bottom: 30px;
   left: 80px;
@@ -559,7 +570,7 @@ div.effect-shine:hover {
   50%  {bottom: 25px; left: 75px;}
   100% {bottom: 30px; left: 80px;}
 }
-.polygon {
+.right-top {
   position: absolute;
   top: 10px;
   right: 150px;
@@ -572,7 +583,7 @@ div.effect-shine:hover {
   50%  {top: 10px; right: 160px;}
   100% {top: 10px; right: 150px;}
 }
-.rectangle {
+.right-bottom {
   position: absolute;
   bottom: 10px;
   right: 70px;
@@ -804,16 +815,16 @@ button.ant-btn.explore {
   align-items: center;
   text-align: center;
 }
-.button-chatbot{
+.button-green{
   background-color: #41b3b6;
 }
-.button-science{
+.button-orange{
   background-color: #E0A390;
 }
-.button-ads{
+.button-yellow{
   background-color: #FFCC4D;
 }
-.button-youtube{
+.button-purple{
   background-color: #8F6FDB;
 }
 .otherpage-button {
@@ -869,3 +880,4 @@ button.ant-btn.explore {
   font-weight: bold;
   margin-top: 10px;
 }
+
