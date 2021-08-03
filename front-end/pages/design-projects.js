@@ -37,40 +37,42 @@ export default function Design(){
             </div>
             <Row style={{margin:"auto"}}>
             <div className="button-container">
-              <Button className="otherpage-button button-chatbot">
+              <Button className="otherpage-button button-green">
                 <a href="#webpage"><LayoutOutlined /></a>
               </Button>
               <div className="button-description">Web design</div>
             </div>
-            <div className="button-container">
-              <Button className="otherpage-button button-science">
+            {/* <div className="button-container">
+              <Button className="otherpage-button button-yellow">
                 <a href="#presentation"><FundProjectionScreenOutlined /></a>
               </Button>
               <div className="button-description">Presentation</div>
-            </div>
+            </div> */}
             </Row>
           </div>
         </div>
       </div>
       <div className="contentbox1" id="webpage">
-        <div className="content-number">01/02</div> 
+        <div className="content-number">01/01</div> 
         <div className="content-header">GEEKLY BACON</div>
         <div className="content-subheader">design project</div>
         <div className="content-description">webwebwebwebweb for devedevdvevdevdve
         fgjflkhpytfohioginkl;vsptfid[pghfklvbkh
         dfgokdtfpohgifghoglfknlbvm,cl.nmvb.,mcx
         splkfrl;skerfl;krl;kl;k;lkrf;ldkf;lrkdf;lskf;l</div>
-        <Row>
         <Image.PreviewGroup>
-          <Image src={gb1.src} width={240} height={416} className="geekly-bacon"/>
-          <Image src={gb2.src} width={240} height={353} className="geekly-bacon"/>
-          <Image src={gb3.src} width={240} height={500} className="geekly-bacon"/>
+        <Row justify="center" align="top">
+          <Col span={6} style={{textAlign:"center"}}><Image src={gb1.src} width={240} height={416} className="geekly-bacon"/></Col>
+          <Col span={6} style={{textAlign:"center"}}><Image src={gb2.src} width={240} height={353} className="geekly-bacon"/></Col>
+          <Col span={6} style={{textAlign:"center"}}><Image src={gb3.src} width={240} height={500} className="geekly-bacon"/></Col>
+          <Col span={6} style={{textAlign:"center"}}>
           <Image src={gb4.src} width={240} height={184} className="geekly-bacon"/>
-          <Image src={gb5.src} width={240} height={184} className="geekly-bacon"/>
-          </Image.PreviewGroup>
+          <Image src={gb5.src} width={240} height={184} className="geekly-bacon" style={{marginTop: "20px"}}/>
+          </Col>
         </Row>
+        </Image.PreviewGroup>
       </div>
-      <div className="contentbox2" id="presentation">
+      {/* <div className="contentbox2" id="presentation">
         <div className="content-number">02/02</div> 
         <div className="content-header">Presentations</div>
         <div className="content-subheader">design project</div>
@@ -84,7 +86,7 @@ export default function Design(){
           <Image src={gb5.src} width={240} height={184} className="geekly-bacon"/>
           </Image.PreviewGroup>
         </Row>
-      </div>
+      </div> */}
 
       <footer>
           Coded by ZUMO
