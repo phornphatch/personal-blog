@@ -164,7 +164,7 @@ footer {
 
 .ant-btn-primary {
   background-color: #41b3b6;
-  border-color: #41b3b6;
+  border: none;
 }
 
 .topic {
@@ -287,15 +287,6 @@ h1:nth-child(2) {
   font-size: 16px;
 }
 
-
-.project {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .projects {
   width: 80%;
   margin: auto;
@@ -368,19 +359,9 @@ h1:nth-child(2) {
 	}
 }
 
-.other {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.other {
+.others {
   width: 80%;
   margin: auto;
-  align-items: center;
-  align-self: center;
 }
 .other-background {
   width: 100%;
@@ -392,12 +373,12 @@ h1:nth-child(2) {
 .other-topic1 {
   font-size: 23px;
   font-weight: bold;
-  display: inline;
   text-decoration: underline;
   text-underline-offset: -15px;
   text-decoration-thickness: 0.5em;
   text-decoration-skip-ink: none; 
   text-decoration-color: #f2c94c;
+  margin-top: 50px;
 }
 .other-topic {
   font-size: 50px;
@@ -711,7 +692,7 @@ button.ant-btn.explore {
 .otherpage-overlay {
   position: absolute;
   z-index: 1;
-  top: 30%;
+  top: 20%;
   left: 0;
   width: 100%;
 }
@@ -729,7 +710,8 @@ button.ant-btn.explore {
 }
 .otherpage-description {
   font-size: 20px;
-  width: 100%;
+  width: 50%;
+  margin: auto;
   margin-top: 30px;
   margin-bottom: 70px;
   text-align: center;
@@ -868,10 +850,11 @@ button.ant-btn.explore {
   font-size: 16px;
   font-weight: normal;
   color: black;
-  padding-top: 10px;
-  width: 90%;
+  padding-top: 30px;
+  width: 80%;
   margin: auto;
   padding-bottom: 30px;
+  text-align: justify;
 }
 .download-button {
   background-color: #E0A390;

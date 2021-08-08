@@ -181,7 +181,7 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
                   <span> Projects </span>	
                 </p>
                 <span className="project-description">
-                  A showcase from my wed development learning.
+                  A showcase from my web development learnings.
                   <br/><br/>
                   I learned how to code from FreeCodeCamp. It has amazing learning resources.
                   These are some examples of coding projects from FreeCodeCamp.
@@ -232,17 +232,16 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
               <QueueAnim key="queue" delay={200} interval={500} duration={500} >
                 <div className="about-topic" key="a"> Design Projects </div>
                 <div className="about-description" key="b">
-                  You might wonder how did I ended up building this website and switched from polymer science to software development 
-                  when you look at my background or download my resume from a little 
-                  <span style={{color:"#4BC19C", fontWeight:"bold"}}> green</span> button below.
-                  <br/><br/>
-                  Scroll down to learn more.~
+                  UI/UX design is also one of my preferences. I have designed one web application. Actually, I also built it with Ruby on Rails.
+                  This is my first project and it is a work in progress so I only showcase the design here.
+                  <br /><br />
+                  There are more design that I would like to explore. I will keep posting them in this section.
                 </div>
                 <div key="c">
                   <Popover title="See my design projects">
-                    <Button type="primary" shape="round" size={'large'} >
+                    <Button type="primary" shape="round" size={'large'}>
                       <a href="/design-projects" >
-                        <SmileOutlined />
+                      <SmileOutlined /> Click Here to View My Design Works. <SmileOutlined />
                       </a>
                     </Button>
                   </Popover>
@@ -256,20 +255,20 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
 
         <>{/* Others */}</>
         <div className="other-background" id="random-works">
-          <div className="other">
+          <div className="others">
             <Row>
               <Col span={12} className="other-detail">
-                <span className="other-topic1"> This section is <br/>random and complicated ! </span>
+                <span className="other-topic1"> This section includes<br/>random stuffs.</span>
                 <div className="other-topic effect-shine">Random Works</div>
                 <span className="project-description">
-                  This section includes my random works (just show my skills)
-                  such as the chatbot, my scientific research and journal, my part-time job as advertising actor and my vdo cilp on youtube.
+                  All my other stuffs go here. I have included my previous works in other field such as
                   <br/><br/>
-                  I plan to build more stuffs in the future. Stay Tuned !! 👀
+                  <li>Modeling</li>
+                  <li>Video and photo editing</li>
+                  <li>Academic publications</li>
+                  <br/>
+                  And a chatbot project that was used by my previous company.
                 </span>
-                {/* <Button type="primary" shape="round" size={'large'} >
-                      SEE MORE
-                    </Button> */}
               </Col>
               <Col span={12} style={{marginTop: "70px", textAlign:"center"}}>
                 <OverPack>
@@ -279,7 +278,7 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
                     <div className="other-switch">
                       <Switch onClick={() => window.location="/other-works"}></Switch>
                     </div>
-                    <div className="other-topic1" >
+                    <div className="other-topic1">
                       Please turn on 
                       if you really want to know.
                     </div>
