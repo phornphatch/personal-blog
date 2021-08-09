@@ -41,6 +41,7 @@ const menu = (
 export default function Design(){
   return (
     <div className="other-page">
+
       {/* Naviagtion Bar */}
       <Layout>
         <Header style={{ zIndex: 20, width: '100%' }}>
@@ -84,8 +85,8 @@ export default function Design(){
       </div>
       <div className="contentbox1" id="webpage">
         <div className="content-number">01/02</div> 
-        <div className="content-header">GEEKLY BACON</div>
-        <div className="content-subheader">Web Design Project</div>
+        <div className="content-topic">GEEKLY BACON</div>
+        <div className="content-subtopic">Web Design Project</div>
         <div className="content-description">
           My first project is a web application named "GEEKLY BACON". Actually, I also built it with Ruby on Rails.
           It is a work in progress so I only showcase the design here. 

@@ -128,8 +128,8 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
        
 
         <>{/* Abouts */}</>
-        <div className="about-background" id="about">
-          <div className="about">
+        <div className="content-layout1" id="about">
+          <div className="content-sublayout">
             <Row>
               <Col span={12} className="image">
               <OverPack style={{display: 'flex'}}>
@@ -140,13 +140,13 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
                   </QueueAnim>
                 </OverPack>
               </Col>
-              <Col span={12} className="about-detail">
+              <Col span={12} className="content-detail">
               <OverPack style={{display: 'flex'}}>
-              <QueueAnim key="queue" delay={200} interval={500} duration={500} >
-                <div className="about-topic1" key="a"> This is not a resume ! </div>
-                <div className="about-topic2" key="b"> It's just.. </div>
-                <div className="about-topic" key="c"> My Life Story. 🚀 </div>
-                <div className="about-description" key="d">
+              <QueueAnim key="queue" delay={200} interval={500} duration={1000} >
+                <div className="highlight-text" key="a"> This is not a resume ! </div>
+                <div className="subtopic" key="b"> It's just.. </div>
+                <div className="topic" key="c"> My Life Story. 🚀 </div>
+                <div className="description" key="d">
                   You might wonder how did I ended up building this website and switched from polymer science to software development 
                   when you look at my background or download my resume from a little 
                   <span style={{color:"#4BC19C", fontWeight:"bold"}}> green</span> button below.
@@ -170,17 +170,17 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
         </div>
 
         <>{/* Coding Projects */}</>
-        <div className="projects-background" id="coding">
+        <div className="content-layout2" id="coding">
         <div className="dot1"><Image src={dot1} width={350} height={250} /></div>
         <div className="dot2"><Image src={dot2} width={380} height={270} /></div>
-          <div className="projects">
+          <div className="content-sublayout">
             <Row style={{margin:"auto", marginTop:"50px"}}>
-              <Col span={12} className="project-detail">
-                <p className="popout project-topic">
+              <Col span={12} className="content-detail">
+                <p className="popout topic">
                   <span>Coding </span> <br />
                   <span> Projects </span>	
                 </p>
-                <span className="project-description">
+                <span className="description">
                   A showcase from my web development learnings.
                   <br/><br/>
                   I learned how to code from FreeCodeCamp. It has amazing learning resources.
@@ -215,23 +215,23 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
         </div>
 
         <>{/* Design Projects */}</>
-        <div className="about-background" id="design">
-          <div className="about">
+        <div className="content-layout1" id="design">
+          <div className="content-sublayout">
             <Row>
               <Col span={12} className="image">
               <OverPack style={{display: 'flex'}}>
-                  <QueueAnim key="queue" delay={200} interval={500} duration={1000} animConfig={[
+                  <QueueAnim key="queue" delay={200} interval={500} duration={700} animConfig={[
                       { opacity: [1, 0], translateX: [0, -50] }
                     ]}>
                     <Image src={designproject} width={443} height={485} key="a" />
                   </QueueAnim>
                 </OverPack>
               </Col>
-              <Col span={12} className="about-detail">
+              <Col span={12} className="content-detail">
               <OverPack style={{display: 'flex'}}>
               <QueueAnim key="queue" delay={200} interval={500} duration={500} >
-                <div className="about-topic" key="a"> Design Projects </div>
-                <div className="about-description" key="b">
+                <div className="topic" key="a"> Design Projects </div>
+                <div className="description" key="b">
                   UI/UX design is also one of my preferences. I have designed one web application. Actually, I also built it with Ruby on Rails.
                   This is my first project and it is a work in progress so I only showcase the design here.
                   <br /><br />
@@ -254,13 +254,15 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
         </div>
 
         <>{/* Others */}</>
-        <div className="other-background" id="random-works">
-          <div className="others">
+        <div className="content-layout2" id="random-works">
+        <div className="dot1"><Image src={dot1} width={350} height={250} /></div>
+        <div className="dot2"><Image src={dot2} width={380} height={270} /></div>
+          <div className="content-sublayout">
             <Row>
-              <Col span={12} className="other-detail">
-                <span className="other-topic1"> This section includes<br/>random stuffs.</span>
-                <div className="other-topic effect-shine">Random Works</div>
-                <span className="project-description">
+              <Col span={12} className="content-detail">
+                <span className="highlight-text"> This section includes<br/>random stuffs.</span>
+                <div className="topic effect-shine">Random Works</div>
+                <span className="description">
                   All my other stuffs go here. I have included my previous works in other field such as
                   <br/><br/>
                   <li>Modeling</li>
@@ -278,7 +280,7 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
                     <div className="other-switch">
                       <Switch onClick={() => window.location="/other-works"}></Switch>
                     </div>
-                    <div className="other-topic1">
+                    <div className="highlight-text">
                       Please turn on 
                       if you really want to know.
                     </div>
@@ -287,14 +289,12 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
                 </OverPack>
               </Col>
             </Row>
-        
           </div>
-          
         </div>
 
         <>{/* Galleries */}</>
-        <div className="gallery-background" id="gallery">
-          <div className="gallery">
+        <div className="content-layout3" id="gallery">
+          <div className="content-sublayout3">
             <Row style={{ width: "100%" }}>
               <Col span={24}>
                 <div className="topic" style={{ textAlign: 'center' }}>📸</div>
@@ -325,8 +325,8 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
         </div>
 
         <>{/* Contact */}</>
-        <div className="contact-background" id="contact">
-          <div className="contact">
+        <div className="contact-layout" id="contact">
+          <div className="contact-sublayout">
             <Row>
               <Col span={10} className="contact-image">
                 <Image src={contact2} />
