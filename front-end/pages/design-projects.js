@@ -1,7 +1,5 @@
-import Head from 'next/head'
-import axios from 'axios'
 import { Image } from 'antd'
-import { Button, Row, Col, Layout, Menu, Popover, BackTop, Switch, Card, Dropdown} from 'antd'
+import { Button, Row, Col, Layout, Menu, Dropdown} from 'antd'
 import blackBg from '../public/black-bg.png'
 import gb1 from '../public/gb1.png'
 import gb2 from '../public/gb2.png'
@@ -16,46 +14,15 @@ import circlePurple from '../public/circle-purple.png'
 import triangleBlue from '../public/triangle-blue.png'
 import starGreen from '../public/star-green.png'
 import roundPink from '../public/round-pink.png'
-import { LayoutOutlined, FundProjectionScreenOutlined } from '@ant-design/icons';
-const { Header, Footer, Sider, Content } = Layout;
-const { Meta } = Card;
-const menu = (
-  <Menu>
-    <Menu.Item>
-      <a href="/#coding">
-        💻 Coding
-      </a>
-    </Menu.Item>
-    <Menu.Item>
-      <a href="/#design">
-        🎨 Design
-      </a>
-    </Menu.Item>
-    <Menu.Item>
-      <a href="/#random-works">
-        🍭 Random
-      </a>
-    </Menu.Item>
-  </Menu>
-);
+import { LayoutOutlined } from '@ant-design/icons';
+import { Navbar } from '../components/Navbar'
+
+
 export default function Design(){
   return (
     <div className="other-page">
 
-      {/* Naviagtion Bar */}
-      <Layout>
-        <Header style={{ zIndex: 20, width: '100%' }}>
-          <div className="logo"><a href="/">ZUMO</a></div>
-          <Menu mode="horizontal" defaultSelectedKeys={['0']}>
-            <Menu.Item key="1"><a href="#about">About Me</a></Menu.Item>
-            <Dropdown overlay={menu} placement="bottomCenter">
-            <Menu.Item key="2"><a>My Works</a></Menu.Item>
-            </Dropdown>
-            <Menu.Item key="3"><a href="#gallery">Gallery</a></Menu.Item>
-            <Menu.Item key="4"><a href="#contact">Contact Me</a></Menu.Item>
-          </Menu>
-        </Header>
-      </Layout>
+      <Navbar />
       
       <div className="otherpage-header">
         <Image src={blackBg.src} preview={false} className="other-main-image" />
@@ -113,8 +80,8 @@ export default function Design(){
 
       <div className="contentbox2" id="presentation">
         <div className="content-number">02/02</div> 
-        <div className="content-header">MY PERSONAL SITE</div>
-        <div className="content-subheader">Web Design Project</div>
+        <div className="content-topic">MY PERSONAL SITE</div>
+        <div className="content-subtopic">Web Design Project</div>
         <div className="content-description">
           I designed this website to my liking. It is inspired by multiple references and mixed &amp; matched by me.
           It is mainly for me to hone mutiple skills such as graphic design, coding, and etc. 

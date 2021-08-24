@@ -1,6 +1,4 @@
-import Head from 'next/head'
-import axios from 'axios'
-import { Button, Row, Col, Layout, Menu, Popover, BackTop, Switch, Card, Image, Dropdown } from 'antd'
+import { Button, Row, Col, Layout, Menu, Card, Image, Dropdown } from 'antd'
 import blackBg from '../public/black-bg.png'
 import circlePurple from '../public/circle-purple.png'
 import triangleBlue from '../public/triangle-blue.png'
@@ -30,45 +28,15 @@ import bot6 from '../public/bot6.png'
 import bot7 from '../public/bot7.png'
 import bot8 from '../public/bot8.png'
 import { WechatOutlined, YoutubeOutlined, ExperimentOutlined, VideoCameraOutlined } from '@ant-design/icons'
-const { Header, Footer, Sider, Content } = Layout
-const { Meta } = Card
-const menu = (
-  <Menu>
-    <Menu.Item>
-      <a href="/#coding">
-        💻 Coding
-      </a>
-    </Menu.Item>
-    <Menu.Item>
-      <a href="/#design">
-        🎨 Design
-      </a>
-    </Menu.Item>
-    <Menu.Item>
-      <a href="/#random-works">
-        🍭 Random
-      </a>
-    </Menu.Item>
-  </Menu>
-)
+import { Navbar } from '../components/Navbar'
+
+const { Header } = Layout
+
 export default function Other () {
   return (
     <div className="other-page">
 
-      {/* Naviagtion Bar */}
-      <Layout>
-        <Header style={{ zIndex: 20, width: '100%' }}>
-          <div className="logo"><a href="/">ZUMO</a></div>
-          <Menu mode="horizontal" defaultSelectedKeys={['0']}>
-            <Menu.Item key="1"><a href="/#about">About Me</a></Menu.Item>
-            <Dropdown overlay={menu} placement="bottomCenter">
-            <Menu.Item key="2"><a>My Works</a></Menu.Item>
-            </Dropdown>
-            <Menu.Item key="3"><a href="/#gallery">Gallery</a></Menu.Item>
-            <Menu.Item key="4"><a href="/#contact">Contact Me</a></Menu.Item>
-          </Menu>
-        </Header>
-      </Layout>
+      <Navbar />
 
       <div className="otherpage-header">
         <Image src={blackBg.src} preview={false} className="other-main-image" />
@@ -119,8 +87,8 @@ export default function Other () {
         <div className="content-number">01/04</div>
         <Row>
           <Col span={15}>
-          <div className="content-header">BioPBSbotnoi</div>
-          <div className="content-subheader">Decrease Company Cost Up to 1,749,380 Baht/Year</div>
+          <div className="content-topic">BioPBSbotnoi</div>
+          <div className="content-subtopic">Decrease Company Cost Up to 1,749,380 Baht/Year</div>
           <Col>
             <div className="content-description">
               During my time as a technical service engineer at PTTMCC,
@@ -146,7 +114,7 @@ export default function Other () {
           </Col>
         </Row>
           <Row>
-          <div className="other-topic1" style={{ marginLeft: '50px' }}>Example</div>
+          <div className="highlight-text" style={{ marginLeft: '50px' }}>Example</div>
           </Row>
           <Image.PreviewGroup>
           <Row justify="center" align="top">
@@ -166,13 +134,16 @@ export default function Other () {
       <div className="content-number">02/04</div>
         <Row>
           <Col span={12} style={{ paddingLeft: '50px' }} >
-          <div className="content-header">Scientific Researches</div>
-          <div className="content-subheader">My Bachelor's and Master's Research Projects</div>
+          <div className="content-topic">Scientific Researches</div>
+          <div className="content-subtopic">My Bachelor's and Master's Research Projects</div>
           <div className="content-description">
             I had worked on a couple interesting projects during my bachelor's and master's degree.
             <Row>
-            <div className="content-subheader">Bachelor's degree project</div>
-            <div className="content-description">
+            <div className="content-subtopic">
+              <br/>Bachelor's degree project
+            </div>
+            <div>
+            <br/>
               I chose a project related to biopolymer whose goal is to synthesize a wound dressing which will degrade on the wound, does not required peeling off and has wound healing capability.
               Because most of conventional wound dressings would stick to the wound causing more pain while peeling off.
               This wound dressing has also high water absorption, enzymatic degradation and antibacterial activity which is perfect for burning wound.
@@ -193,7 +164,7 @@ export default function Other () {
             <Image src={acsposter.src} width={414} />
           </Col>
           <Col span={12} style={{ paddingTop: '50px' }} >
-          <div className="content-subheader">Master's degree project</div>
+          <div className="content-subtopic">Master's degree project</div>
             <div className="content-description">
               I chose a different type of project for my master's degree. I worked more in the field of physics.
               I have learn about a new and interesting kind of polymer named "Polybenzoxazine".
@@ -202,22 +173,17 @@ export default function Other () {
               it will help the capacitor to have high specific power, quick charging time, long life cycle and wide working temperature range.
               <br/><br/>
               This project was exhibited in 255th American Chemical Society (ACS) National Meeting 2018 at New Orleans, LA.
+              <li>Synthesis and electrochemical properties of polybenzoxazine-derived nanoporous carbon electrode materials for supercapacitors</li>
+              <Button className="download-button"><a href="/ACSposter.pdf" download>DOWNLOAD POSTER</a></Button>
             </div>
-          <div className="content-description">
-            <Row>
-            <li>Synthesis and electrochemical properties of polybenzoxazine-derived nanoporous carbon electrode materials for supercapacitors</li>
-            <Button className="download-button"><a href="/ACSposter.pdf" download>DOWNLOAD POSTER</a></Button>
-            </Row>
-          </div>
           </Col>
-
         </Row>
       </div>
 
       <div className="contentbox3" id="ads">
         <div className="content-number">03/04</div>
-          <div className="content-header">Acting</div>
-          <div className="content-subheader">Advertisement</div>
+          <div className="content-topic">Acting</div>
+          <div className="content-subtopic">Advertisement</div>
           <div className="content-description">
             During my college years, I gained experiences in acting by being part of advertisements both still images and videos.
             These are some of my works that you can watch right now.
@@ -248,8 +214,8 @@ export default function Other () {
 
       <div className="contentbox4" id="youtube">
         <div className="content-number">04/04</div>
-            <div className="content-header">Video Editing</div>
-            <div className="content-subheader">Youtube</div>
+            <div className="content-topic">Video Editing</div>
+            <div className="content-subtopic">Youtube</div>
             <div className="content-description">
               Since I moved to Finland, I created a Facebook page and a Youtube channel to share and review interesting things and places in the country.
               I have worked a lot on my editing skill and all of my videos are edited on a single iPad.

@@ -14,11 +14,10 @@ import dot2 from '../public/dot2.png'
 import randomwork from '../public/random-work.png'
 import { InstagramOutlined, GithubOutlined, YoutubeOutlined, FacebookOutlined, LinkedinOutlined, SolutionOutlined, UpOutlined, SmileOutlined } from '@ant-design/icons';
 import { OverPack } from 'rc-scroll-anim';
-import TweenOne from 'rc-tween-one';
 import QueueAnim from 'rc-queue-anim';
 import designproject from '../public/designproject.png'
 
-const { Header, Footer, Sider, Content } = Layout
+const { Header } = Layout
 const menu = (
   <Menu>
     <Menu.Item>
@@ -70,9 +69,8 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Naviagtion Bar */}
       <Layout>
-        <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+        <Header style={{ zIndex: 20, width: '100%' }}>
           <div className="logo"><a href="/">ZUMO</a></div>
           <Menu mode="horizontal" defaultSelectedKeys={['0']}>
             <Menu.Item key="1"><a href="#about">About Me</a></Menu.Item>
@@ -218,8 +216,8 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
         <div className="content-layout1" id="design">
           <div className="content-sublayout">
             <Row>
-              <Col span={12} className="image">
-              <OverPack style={{display: 'flex'}}>
+              <Col span={12}>
+              <OverPack style={{display: 'flex', marginLeft:"50px"}}>
                   <QueueAnim key="queue" delay={200} interval={500} duration={700} animConfig={[
                       { opacity: [1, 0], translateX: [0, -50] }
                     ]}>
@@ -227,10 +225,10 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
                   </QueueAnim>
                 </OverPack>
               </Col>
-              <Col span={12} className="content-detail">
+              <Col span={12} className="content-detail" style={{marginTop:"50px"}}>
+              <div className="topic" key="a"> Design Projects </div>
               <OverPack style={{display: 'flex'}}>
               <QueueAnim key="queue" delay={200} interval={500} duration={500} >
-                <div className="topic" key="a"> Design Projects </div>
                 <div className="description" key="b">
                   UI/UX design is also one of my preferences. I have designed one web application. Actually, I also built it with Ruby on Rails.
                   This is my first project and it is a work in progress so I only showcase the design here.
@@ -272,7 +270,7 @@ export default function Home({ projects, galleries, abouts }) { // {projects} = 
                   And a chatbot project that was used by my previous company.
                 </span>
               </Col>
-              <Col span={12} style={{marginTop: "70px", textAlign:"center"}}>
+              <Col span={12} style={{marginTop: "50px", textAlign:"center"}}>
                 <OverPack>
                 <QueueAnim key="queue" delay={100} interval={500} duration={1000} >
                 <Image src={randomwork} key="a" />
