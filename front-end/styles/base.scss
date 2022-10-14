@@ -1,0 +1,148 @@
+$screen-mobiles-xs: 350px;
+$screen-mobiles-s: 400px;
+$screen-mobiles: 580px;
+$screen-mobiles-l: 720px;
+$screen-tablets: 900px; // breakpoint
+$screen-tablets-l: 1024px; // max widtin for content
+$screen-tablets-xl: 1140px;
+$screen-desktops: 1200px;
+$screen-desktops-xl: 1440px; // max widtin for banner
+
+:root {
+  --color-bg: #1E2328;
+  --color-text-white: #E6E7E1;
+  --color-text-black: #1E2328;
+  --color-button-green: #41b3b6;
+
+  --color-blue-200: #a0e9ff; // text gradient
+  --color-blue-400: #4dd6ff;
+  --color-blue-600: #00bff9;
+  --color-blue-800: #0080a6;
+
+  --color-purple-200: #d3b3ff;
+  --color-purple-400: #a162e8; // text gradient
+  --color-purple-600: #984dff;
+  --color-purple-800: #663399;
+
+  --color-pink-600: #f6bed0;
+  --color-pink-200: #f3a9c0;
+  --color-pink-400: #f093b0; // text gradient
+  --color-pink-800: #e74f7e;
+
+  --color-yellow-200: #f1d59d;
+  --color-yellow-400: #edca85; // text gradient
+  --color-yellow-600: #f2c94c;
+  --color-yellow-800: #e3ae45;
+
+  --mobile-padding: 30px;
+  --button-height-desktop: 40px;
+  --button-height-mobile: 40px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--mobile-padding);
+
+  @media (min-width: $screen-tablets) {
+    padding: 0px 0px;
+  }
+}
+
+.text {
+  &__title {
+    &--xxl {
+      font-size: 70px;
+      font-weight: bold;
+
+      @media (min-width: $screen-tablets) {
+        font-size: 120px;
+        font-weight: bolder;
+      }
+    }
+
+    &--xl {
+      font-size: 40px;
+      font-weight: bold;
+
+      @media (min-width: $screen-tablets) {
+        font-size: 48px;
+        font-weight: bold;
+      }
+    }
+
+    &--l {
+      font-size: 24px;
+      font-weight: bold;
+
+      @media (min-width: $screen-tablets) {
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
+
+    &--m {
+      font-size: 20px;
+      font-weight: bold;
+
+      @media (min-width: $screen-tablets) {
+        font-size: 25px;
+        font-weight: bold;
+      }
+    }
+
+    &--s {
+      font-size: 16px;
+      font-weight: bold;
+
+      @media (min-width: $screen-tablets) {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__body {
+    &--l {
+      font-size: 20px;
+      font-weight: normal;
+
+      @media (min-width: $screen-tablets) {
+        font-size: 24px;
+        font-weight: normal;
+      }
+    }
+
+    &--m {
+      font-size: 18px;
+      font-weight: normal;
+
+      @media (min-width: $screen-tablets) {
+        font-size: 20px;
+        font-weight: normal;
+      }
+    }
+
+    &--s {
+      font-size: 14px;
+      font-weight: normal;
+
+      @media (min-width: $screen-tablets) {
+        font-size: 16px;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.button {
+  &--green {
+    font-size: 16px;
+    font-weight: 500;
+    height: var(--button-height-mobile);
+
+    @media (min-width: $screen-tablets) {
+      height: var(--button-height-desktop);
+    }
+  }
+}

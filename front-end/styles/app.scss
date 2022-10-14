@@ -1,5 +1,6 @@
+@import './base.scss';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&display=swap');
-@import url("https://unpkg.com/aos@2.3.1/dist/aos.css"); 
+@import url("https://unpkg.com/aos@2.3.1/dist/aos.css");
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 
 html,
@@ -7,11 +8,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #fbfbfb;
+  background-color: var(--color-bg);
+  overflow-x: hidden;
 }
-* {
-  box-sizing: border-box;
-}
+
 
 main {
   padding: 0;
@@ -32,9 +32,11 @@ footer {
   font-family: 'Inter', sans-serif;
   color: black;
 }
+
 footer img {
   margin-left: 0.5rem;
 }
+
 footer a {
   display: flex;
   justify-content: center;
@@ -45,20 +47,24 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
 .title a {
   color: #0070f3;
   text-decoration: none;
 }
+
 .title a:hover,
 .title a:focus,
 .title a:active {
   text-decoration: underline;
 }
+
 .title {
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
 }
+
 .title,
 .description {
   text-align: left;
@@ -127,14 +133,14 @@ a {
   font-weight: bolder;
 }
 
-.ant-menu{
+.ant-menu {
   background: white;
   font-size: 1rem;
   font-weight: bold;
   float: right;
-  }
+}
 
-.ant-layout-header{
+.ant-layout-header {
   background: white;
 }
 
@@ -150,73 +156,89 @@ a {
   margin: auto;
   padding-top: 7rem;
 }
+
 .banner-background {
   background-color: black;
   width: 100%;
   height: 92vh;
 }
+
 .banner-image {
   margin-top: -20px;
 }
+
 .hello {
   font-size: 3rem;
   font-weight: bold;
   color: white;
   margin-top: 20px;
 }
+
 .name {
   font-size: 8rem;
   font-weight: bolder;
-  background: linear-gradient(250deg,#a0e9ff 45%,#a162e8 60%,#f093b0 80%,#edca85 90%);
+  background: linear-gradient(250deg, #a0e9ff 45%, #a162e8 60%, #f093b0 80%, #edca85 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 100%;
   margin-top: 10px;
 }
+
 .newbiedev {
   font-size: 3.5rem;
   font-weight: bolder;
-  background: linear-gradient(250deg,#a0e9ff 45%,#a162e8 60%,#f093b0 80%,#edca85 90%);
+  background: linear-gradient(250deg, #a0e9ff 45%, #a162e8 60%, #f093b0 80%, #edca85 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .banner-description {
   font-size: 1.3rem;
   font-weight: normal;
-  color:white;
+  color: white;
   margin-top: 20px;
 }
+
 .text-box {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
 }
+
 h1 {
-	font-size: 2rem;
-	font-weight: normal;
-	background-color: #fbfbfb;
-	color: black;
-	display: inline-block;
+  font-size: 2rem;
+  font-weight: normal;
+  background-color: #fbfbfb;
+  color: black;
+  display: inline-block;
 }
+
 h1:nth-child(2) {
-	position: absolute;
-	background-color: black;
-	color: white;
-	clip-path: inset(-1% -1% 50% -1%); // Added the negative values to prevent icky "bleed" in Chrome
+  position: absolute;
+  background-color: black;
+  color: white;
+  clip-path: inset(-1% -1% 50% -1%); // Added the negative values to prevent icky "bleed" in Chrome
 }
-.marquee{
-  display:inline-block;
-  position:relative;
-  animation:scroll 20s linear infinite; 
+
+.marquee {
+  display: inline-block;
+  position: relative;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    left: 0px;
   }
-  @keyframes scroll{
-  0% {left:0px;}
-  100% {left:-800px;}
+
+  100% {
+    left: -800px;
   }
+}
 
 //main elements 
 .content-layout1 {
@@ -225,6 +247,7 @@ h1:nth-child(2) {
   padding-top: 120px;
   background-color: #fbfbfb;
 }
+
 .content-layout2 {
   width: 100%;
   height: 100vh;
@@ -232,16 +255,19 @@ h1:nth-child(2) {
   background-color: #F3F4EC;
   position: relative;
 }
+
 .content-layout3 {
   width: 100%;
   height: 100vh;
   background-color: #fbfbfb;
 }
+
 .content-sublayout {
   width: 80%;
   margin: auto;
   align-items: center;
 }
+
 .content-sublayout3 {
   width: 90%;
   padding: 5rem 0;
@@ -253,24 +279,29 @@ h1:nth-child(2) {
   margin: auto;
   align-self: center;
 }
+
 .content-detail {
   padding-left: 70px;
   padding-top: 30px;
 }
+
 .topic {
   font-size: 50px;
   font-weight: bold;
   margin-top: -13px;
 }
+
 .subtopic {
   font-size: 25px;
   font-weight: bold;
 }
+
 .description {
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 16px;
 }
+
 .highlight-text {
   font-size: 25px;
   font-weight: bold;
@@ -278,49 +309,58 @@ h1:nth-child(2) {
   text-decoration: underline;
   text-underline-offset: -15px;
   text-decoration-thickness: 0.5em;
-  text-decoration-skip-ink: none; 
+  text-decoration-skip-ink: none;
   text-decoration-color: #f2c94c;
 }
 
 // animation and decoration
-.popout{
-	@keyframes ani{
-		0%{
-			transform: translate3d(0,0,0);
-			text-shadow: 0em 0em 0 lightblue;
-		} 
-		30%{
-			transform: translate3d(0,0,0);
-			text-shadow: 0em 0em 0 #a162e8;
-		}
-		70%{
-			transform: translate3d(0.08em,-0.08em,0);
-			text-shadow: -0.08em 0.08em lightblue;
-		}
-		100%{
-			transform: translate3d(0.08em,-0.08em,0);
-			text-shadow: -0.08em 0.08em lightblue;
-		}
-	}
-	span{
-		position: relative;
-		display: inline-block;
-		animation: ani 1s infinite alternate cubic-bezier(0.860, 0.000, 0.070, 1.000);
-		@for $i from 1 through 3{
-			&:nth-last-child(#{$i}n){ animation-delay: -1s*$i/3/2;}
-		}
-	}
+.popout {
+  @keyframes ani {
+    0% {
+      transform: translate3d(0, 0, 0);
+      text-shadow: 0em 0em 0 lightblue;
+    }
+
+    30% {
+      transform: translate3d(0, 0, 0);
+      text-shadow: 0em 0em 0 #a162e8;
+    }
+
+    70% {
+      transform: translate3d(0.08em, -0.08em, 0);
+      text-shadow: -0.08em 0.08em lightblue;
+    }
+
+    100% {
+      transform: translate3d(0.08em, -0.08em, 0);
+      text-shadow: -0.08em 0.08em lightblue;
+    }
+  }
+
+  span {
+    position: relative;
+    display: inline-block;
+    animation: ani 1s infinite alternate cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+    @for $i from 1 through 3 {
+      &:nth-last-child(#{$i}n) {
+        animation-delay: -1s*$i/3/2;
+      }
+    }
+  }
 }
 
 div.effect-shine:hover {
-  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.4) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .4) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
   -webkit-mask-size: 200%;
   animation: shine 2s infinite;
 }
+
 @-webkit-keyframes shine {
   from {
     -webkit-mask-position: 150%;
   }
+
   to {
     -webkit-mask-position: -50%;
   }
@@ -334,11 +374,24 @@ div.effect-shine:hover {
   animation-duration: .8s;
   animation-iteration-count: infinite;
 }
+
 @keyframes example {
-  0%   {left:30px; top:30px;}
-  50%  {left:30px; top:40px;}
-  100% {left:30px; top:30px;}
+  0% {
+    left: 30px;
+    top: 30px;
+  }
+
+  50% {
+    left: 30px;
+    top: 40px;
+  }
+
+  100% {
+    left: 30px;
+    top: 30px;
+  }
 }
+
 .left-bottom {
   position: absolute;
   bottom: 30px;
@@ -347,11 +400,24 @@ div.effect-shine:hover {
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
+
 @keyframes example2 {
-  0%   { bottom: 30px; left: 80px;}
-  50%  {bottom: 25px; left: 75px;}
-  100% {bottom: 30px; left: 80px;}
+  0% {
+    bottom: 30px;
+    left: 80px;
+  }
+
+  50% {
+    bottom: 25px;
+    left: 75px;
+  }
+
+  100% {
+    bottom: 30px;
+    left: 80px;
+  }
 }
+
 .right-top {
   position: absolute;
   top: 10px;
@@ -360,23 +426,48 @@ div.effect-shine:hover {
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
 }
+
 @keyframes example3 {
-  0%   {top: 10px; right: 150px;}
-  50%  {top: 10px; right: 160px;}
-  100% {top: 10px; right: 150px;}
+  0% {
+    top: 10px;
+    right: 150px;
+  }
+
+  50% {
+    top: 10px;
+    right: 160px;
+  }
+
+  100% {
+    top: 10px;
+    right: 150px;
+  }
 }
+
 .right-bottom {
   position: absolute;
   bottom: 10px;
   right: 70px;
   animation-name: example4;
   animation-duration: 1s;
-  animation-iteration-count:infinite;
+  animation-iteration-count: infinite;
 }
+
 @keyframes example4 {
-  0%   {bottom: 10px; right: 70px;}
-  50%  {bottom: 15px; right: 75px;}
-  100% {bottom: 10px; right: 70px;}
+  0% {
+    bottom: 10px;
+    right: 70px;
+  }
+
+  50% {
+    bottom: 15px;
+    right: 75px;
+  }
+
+  100% {
+    bottom: 10px;
+    right: 70px;
+  }
 }
 
 .ant-switch {
@@ -384,12 +475,15 @@ div.effect-shine:hover {
   height: 88px;
   border-radius: 400px;
 }
+
 .ant-switch-handle::before {
   border-radius: 36px;
 }
-.ant-switch-handle::after{
+
+.ant-switch-handle::after {
   margin-right: 50px;
 }
+
 .ant-switch-handle {
   position: absolute;
   top: 8px;
@@ -399,9 +493,11 @@ div.effect-shine:hover {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
+
 .ant-switch-checked .ant-switch-handle {
   left: calc(100% - 72px - 8px);
 }
+
 .ant-switch-checked {
   background-color: #41b3b6;
 }
@@ -411,6 +507,7 @@ div.effect-shine:hover {
   top: 0px;
   left: 0px;
 }
+
 .dot2 {
   position: absolute;
   bottom: 0px;
@@ -426,14 +523,17 @@ div.effect-shine:hover {
   text-align: center;
   font-size: 30px;
 }
+
 // custom elements
 
 .project-image {
   border-radius: 10px 10px 0px 0px;
 }
+
 .gallery-image {
   border-radius: 20px;
 }
+
 .gallery-card {
   border-radius: 20px;
   width: 316px;
@@ -441,17 +541,20 @@ div.effect-shine:hover {
   margin-left: 20px;
   margin-right: 20px;
 }
+
 .gallery-grid {
   display: inline-block;
   width: 80%;
   margin: auto;
   margin-top: 30px;
 }
+
 .gallery-card-title {
   font-size: 25px;
   font-weight: bolder;
   margin-top: 5px;
 }
+
 .gallery-card-description {
   font-size: 14px;
 }
@@ -464,6 +567,7 @@ div.effect-shine:hover {
   text-align: center;
   margin: auto;
 }
+
 .contact-layout {
   background-color: black;
   width: 100%;
@@ -471,23 +575,28 @@ div.effect-shine:hover {
   padding-top: 100px;
   position: relative;
 }
-.contact-image{
+
+.contact-image {
   padding-top: 50px;
   padding-left: 50px;
 }
+
 .contact-topic {
   font-size: 60px;
   font-weight: bolder;
 }
+
 .contact-description {
   font-size: 25px;
   font-weight: normal;
 }
+
 .contact-information {
   margin: auto;
   align-items: center;
   align-self: center;
 }
+
 .icon {
   background-color: white;
   width: 60px;
@@ -508,16 +617,19 @@ div.effect-shine:hover {
   background-color: black;
   color: white;
 }
+
 .gallerypage-header {
   width: 100%;
   position: relative;
-  height:100vh;
- 
+  height: 100vh;
+
 }
+
 .gallery-main-image {
   opacity: 0.7;
-  width:100vw;
+  width: 100vw;
 }
+
 .gallerypage-overlay {
   position: absolute;
   z-index: 1;
@@ -525,23 +637,27 @@ div.effect-shine:hover {
   left: 0;
   width: 100%;
 }
+
 .gallerypage-banner {
-  position:relative;
+  position: relative;
   display: flex;
   flex-direction: column;
 }
+
 .gallerypage-title {
   font-size: 120px;
   font-weight: bolder;
   color: white;
-  font-family: 'Open Sans' ;
+  font-family: 'Open Sans';
   text-align: center;
 }
+
 button.ant-btn.explore {
   margin: auto;
   align-items: center;
   text-align: center;
 }
+
 .explore {
   font-size: 20px;
   text-align: center;
@@ -552,7 +668,8 @@ button.ant-btn.explore {
   border-width: 2px;
   width: 110px;
   height: 40px;
-} 
+}
+
 .explore:hover,
 .explore:focus,
 .explore:active {
@@ -570,21 +687,25 @@ button.ant-btn.explore {
   z-index: 10;
   position: relative;
 }
+
 .gallerypage-description-sub {
   width: 40%;
   margin: auto;
 }
+
 .gallerypage-images {
   width: 80%;
   margin: auto;
 }
+
 .gallerypage-image {
   padding: 10px 10px 10px 10px;
 }
+
 .blur-box {
   width: 100%;
   height: 400px;
-  background-image: linear-gradient(to bottom, rgba(1,0,0,0), rgba(0,0,0,1));
+  background-image: linear-gradient(to bottom, rgba(1, 0, 0, 0), rgba(0, 0, 0, 1));
   position: absolute;
   z-index: 0;
 }
@@ -595,14 +716,17 @@ button.ant-btn.explore {
   background-color: white;
   color: white;
 }
+
 .otherpage-header {
   width: 100%;
   position: relative;
-  height:100vh;
+  height: 100vh;
 }
+
 .other-main-image {
-  width:100vw;
+  width: 100vw;
 }
+
 .otherpage-overlay {
   position: absolute;
   z-index: 1;
@@ -610,18 +734,21 @@ button.ant-btn.explore {
   left: 0;
   width: 100%;
 }
+
 .otherpage-banner {
-  position:relative;
+  position: relative;
   display: flex;
   flex-direction: column;
 }
+
 .otherpage-title {
   font-size: 70px;
   font-weight: bolder;
   color: white;
-  font-family: 'Open Sans' ;
+  font-family: 'Open Sans';
   text-align: center;
 }
+
 .otherpage-description {
   font-size: 20px;
   width: 50%;
@@ -632,13 +759,16 @@ button.ant-btn.explore {
   z-index: 10;
   position: relative;
 }
+
 .otherpage-images {
   width: 80%;
   margin: auto;
 }
+
 .otherpage-image {
   padding: 10px 10px 10px 10px;
 }
+
 .contentbox1 {
   width: 70%;
   margin: auto;
@@ -650,6 +780,7 @@ button.ant-btn.explore {
   margin-bottom: 50px;
   padding-bottom: 30px;
 }
+
 .contentbox2 {
   width: 70%;
   margin: auto;
@@ -661,6 +792,7 @@ button.ant-btn.explore {
   margin-bottom: 50px;
   padding-bottom: 30px;
 }
+
 .contentbox3 {
   width: 70%;
   margin: auto;
@@ -672,6 +804,7 @@ button.ant-btn.explore {
   margin-bottom: 50px;
   padding-bottom: 30px;
 }
+
 .contentbox4 {
   width: 70%;
   margin: auto;
@@ -683,6 +816,7 @@ button.ant-btn.explore {
   margin-bottom: 50px;
   padding-bottom: 30px;
 }
+
 .otherpage-card {
   margin: 10px;
   flex-basis: 30%;
@@ -693,54 +827,66 @@ button.ant-btn.explore {
   border: 2px solid #eaeaea;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
+
 .otherpage-card:hover,
 .otherpage-card:focus,
 .otherpage-card:active {
   color: #0070f3;
   border-color: #edca85;
 }
+
 .otherpage-card h3 {
   margin: 0 0 0 0;
   font-size: 1rem;
   font-weight: bold;
   padding: 7px;
 }
+
 .grid {
   max-width: 900px;
   margin: auto;
   align-items: center;
   text-align: center;
 }
-.button-green{
+
+.button-green {
   background-color: #41b3b6;
 }
-.button-orange{
+
+.button-orange {
   background-color: #E0A390;
 }
-.button-yellow{
+
+.button-yellow {
   background-color: #FFCC4D;
 }
-.button-purple{
+
+.button-purple {
   background-color: #8F6FDB;
 }
+
 .otherpage-button {
   width: 70px;
   height: 70px;
-  border-radius: 500px;;
-  border-color:rgba(0, 0, 0, 0);
+  border-radius: 500px;
+  ;
+  border-color: rgba(0, 0, 0, 0);
   color: white;
   font-size: 40px;
 }
+
 .button-container {
   margin: auto;
   width: 200px;
   margin-bottom: 20px;
   text-align: center;
 }
+
 .button-description {
   font-size: 15px;
   margin-top: 10px;
 }
+
 .content-number {
   font-size: 18px;
   font-weight: bold;
@@ -748,19 +894,22 @@ button.ant-btn.explore {
   padding-top: 30px;
   padding-left: 30px;
 }
-.content-topic{
+
+.content-topic {
   font-size: 30px;
   font-weight: bolder;
   color: black;
   text-align: center;
 }
-.content-subtopic{
+
+.content-subtopic {
   font-size: 18px;
   font-weight: bold;
   color: black;
   text-align: center;
 }
-.content-description{
+
+.content-description {
   font-size: 16px;
   font-weight: normal;
   color: black;
@@ -770,6 +919,7 @@ button.ant-btn.explore {
   padding-bottom: 30px;
   text-align: justify;
 }
+
 .download-button {
   background-color: #E0A390;
   color: white;
@@ -777,4 +927,3 @@ button.ant-btn.explore {
   font-weight: bold;
   margin-top: 10px;
 }
-
